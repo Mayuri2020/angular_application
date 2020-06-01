@@ -1,0 +1,29 @@
+<!--HEADER-->
+<app-header></app-header>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Your Name*</label><br>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control"  formControlName="firstName">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" class="form-control"  formControlName="lastName">
+                <br> <small>First Name</small>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <small>Last Name</small>  
+</div>
+</div><br>
+ <div class="form-group">
+     <label>Email Address*</label>
+<input type="Email" name="email" class="form-control" required="" formControlName="email">
+     </div>
+    </div><br>
+    <!--buginfo-->
+    <app-buginfo></app-buginfo>
+    <!--footer-->
+    <app-footer></app-footer>
+</form>
+<!--<div>
+<h1>
+<app-footer  [parentData]="clickMethod()"></app-footer>
+</h1>
+</div>-->

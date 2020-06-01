@@ -1,0 +1,24 @@
+<!--buginfo-->
+<!-- datepicker-->
+<form [formGroup]="bugInfoForm">
+  <div class="form-group">
+    <input type="text" placeholder="Datepicker" class="form-control"
+      [bsConfig]="{ customTodayClass: 'custom-today-class' }" bsDatepicker formControlName="dateTime"> <br>
+      <!--timepicker-->
+      <timepicker [hoursPlaceholder]="hoursPlaceholder"
+      [minutesPlaceholder]="minutesPlaceholder"
+      [secondsPlaceholder]="secondsPlaceholder" showSeconds="true"></timepicker><br>
+    <!--impact-->
+    <label>Impact </label>
+    <select class="form-control" required="" formControlName="impact">
+     <option selected> low </option>
+    <option>medium</option>
+    <option>high</option>
+    </select>
+  <br>
+<br>
+<!--details-->
+<label>Detailed Explanation of Bug*</label><br>
+<textarea class="form-control" id="message" cols="100" rows="4" formControlName="bugDescription"></textarea>
+  </div>
+</form>
